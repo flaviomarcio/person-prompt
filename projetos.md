@@ -4,7 +4,7 @@
 
 Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos de configuração gerando assim um *README.md* para o projeto trabalhado
 
-```
+```text
 1. Analise o código.
 2. Documente todos os arquivos de codigo fonte com comentarios nas classes e metodos.
 3. Gere um README.md para o projeto, se README.md já existir então sobrescreva ele.
