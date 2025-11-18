@@ -1,3 +1,10 @@
+# Prompts para analise e documentação dos projetos
+
+## Documentação de projetos java e node
+
+Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos de configuração gerando assim um *README.md* para o projeto trabalhado
+
+```
 1. Analise o código.
 2. Documente todos os arquivos de codigo fonte com comentarios nas classes e metodos.
 3. Gere um README.md para o projeto, se README.md já existir então sobrescreva ele.
@@ -23,3 +30,4 @@
     4. Aplicação do SOLID.
     5. Nos repositorios as consultas devem ser sempre que possivel na forma declarativa evitando o uso de queries explicitas.
     6. Forneça exemplos para os items no deste topico
+```
