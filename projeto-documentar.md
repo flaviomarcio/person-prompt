@@ -6,7 +6,7 @@
     1. como objetivo e principais classes e colocar informações sobre enums.
     2. No README.md deve conter detalhes de todas as classes.
     3. No README.md deve conter detalhes dos debitos tecnicos da aplicação com a recomendações para implementação.
-    8. No README.md deve conter detalhes do application.yml se este existir
+6. No README.md deve conter detalhes do application.yml se este existir
     1. No README.md deve mais detalhados no application.yml onde tratar do spring.cloud.gateway
     2. No README.md deve mais detalhados no application.yml onde tratar do spring.cloud.vault
     3. No README.md deve mais detalhados no application.yml onde tratar do spring.doc
