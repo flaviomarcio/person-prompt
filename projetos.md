@@ -9,6 +9,7 @@ Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos
 2. Documente todos os arquivos de codigo fonte.
     1. Incluir comentarios nas classes, metodos e adapters do projeto.
     2. Identifique os controllers e DTOs e documente para o swagger.
+    3. Melhore a descrição da mensagem de erro Os atributos que tiverem constrains como ex: @NotBlack, @NotNull, @Size, @Max, @Min, @NotEmpty, @Pattern e outras.
 3. Gere um README.md para o projeto, se README.md já existir então sobrescreva ele.
 4. O README.md deve conter informações por relevancia ao desenvolvedor.
 5. No README.md deve conter informações do projeto, onde:
