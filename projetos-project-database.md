@@ -25,6 +25,8 @@ Tem por objetivo analisar e gerar DDL dos models de um projetos.
         - Particiladirades do oracle
         - Se no projeto o field indicar tipo UUID e houver algum converter registrado publicamente no projeto ou na configuração do field ficar claro que está configurado como texto então considerar usar varchar(36)
         - Se no projeto o field indicar tipo boolean e houver algum converter registrado publicamente no projeto ou na configuração do field ficar claro que está configurado como texto então considerar usar o tipo ou conversão indicada para o campo.
+        - Se no projeto o field indicar tipo boolean for necessário criar um campo numerico considerar criar sempre como integer ao em vez de bit, smallint ou tipos equivalentes.
+
         - Se o field for String e este não tiver a length definido considerar 255.
     - constraints-pk.sql, PK utilizadas nos models
         - FK isoladas do create table
