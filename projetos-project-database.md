@@ -26,7 +26,6 @@ Tem por objetivo analisar e gerar DDL dos models de um projetos.
         - Se no projeto o field indicar tipo UUID e houver algum converter registrado publicamente no projeto ou na configuração do field ficar claro que está configurado como texto então considerar usar varchar(36)
         - Se no projeto o field indicar tipo boolean e houver algum converter registrado publicamente no projeto ou na configuração do field ficar claro que está configurado como texto então considerar usar o tipo ou conversão indicada para o campo.
         - Se no projeto o field indicar tipo boolean for necessário criar um campo numerico considerar criar sempre como integer ao em vez de bit, smallint ou tipos equivalentes.
-
         - Se o field for String e este não tiver a length definido considerar 255.
     - constraints-pk.sql, PK utilizadas nos models
         - FK isoladas do create table
@@ -57,7 +56,6 @@ Tem por objetivo analisar e gerar DDL dos models de um projetos.
             - Façá considerações diante de seletividade:
                 - ex: se [data] for localdate é um otimo campo para indice, mas se ele for timestamp ou datetimes já tem a performance prejudica, contudo se ainda sim pode estar sendo gravado com hora 00:00:00 sendo assim torna-se novamente um bom campo para indice.
                 - Se o campo [date] for timestamp o o filtro via controller iniciar com date ou localdate, considerar usar estrategia de ajuste do dado do campo como cast, converter  desde o banco de dados tenha suporte a isso. obs: postgres tem suporte a isso um campo timestamp [data] pode se tornar apenas date assim: create index un_table_name on table_name(data::date, name).
-
-    - init.data 
-    - fake-data.sql 
+    - init.data, arquivo contem scripts personalizados, caso o arquivo já exista manter sem modificações
+    - fake-data.sql, arquivo contem scripts personalizados, caso o arquivo já exista manter sem modificações
 ```
