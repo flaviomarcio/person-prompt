@@ -16,6 +16,7 @@ Tem por objetivo analisar e gerar DDL dos models de um projetos.
         - Usar equivalente a [select object_id('object_name')] em banco de dados ou comandos que não tenham suporte a [if exists].
     - schemas.sql, Apenas esquemas usados para conter os objetos
     - sequences.sql, Incluir os sequences indicados no model desde havendo suporte a generator ou generatores no banco de dados configurado no projeto,
+    - trigger, Incluir 
     - tables.sql, tabelas dos models
         - Não deve incluir nenhum tipo de drop aqui
         - Usar equivalente a [select object_id('object_name')] em banco de dados ou comandos que não tenham suporte a [if exists] ou [if not exists].
@@ -28,15 +29,17 @@ Tem por objetivo analisar e gerar DDL dos models de um projetos.
         - Se no projeto o field indicar tipo boolean for necessário criar um campo numerico considerar criar sempre como integer ao em vez de bit, smallint ou tipos equivalentes.
         - Se o field for String e este não tiver a length definido considerar 255.
     - constraints-pk.sql, PK utilizadas nos models
-        - FK isoladas do create table
+        - PK isoladas do create table
         - Não deve incluir nenhum tipo de drop aqui
         - Usar equivalente a [select object_id('object_name')] em banco de dados ou comandos que não tenham suporte a [if not exists].
         - Seguir a formatação para nomear as constraints: pk__${table-name}_${fields-names}. 
     - constraints-fk.sql, FK utilizadas nos models
+        - FK isoladas do create table
         - Não deve incluir nenhum tipo de drop aqui
         - Usar equivalente a [select object_id('object_name')] em banco de dados ou comandos que não tenham suporte a [if not exists].
         - Seguir a formatação para nomear as constraints: fk__${table-name}_${fields-names}. 
     - constraints-check.sql, constraits utilizadas nos fields dos models para validar dados como, [1,2,3] ou ['A','B','C']
+        - Check devem isoladas do create table
         - Não deve incluir nenhum tipo de drop aqui
         - Usar equivalente a [select object_id('object_name')] em banco de dados ou comandos que não tenham suporte a [if not exists].        
         - criar constraints para objeto cuja o model tem alguma tratativa como apenas incluir apenas ['A','B','C'] via configuração direta no field
