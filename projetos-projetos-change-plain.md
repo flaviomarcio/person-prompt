@@ -5,18 +5,244 @@
 Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos de configuração gerando assim um *README.md* para o projeto trabalhado
 
 ```text
-1. Atuar para criar um plano de ação neste repositório e considere a palavra TASK-NAME a representação TTT-1234 sendo esta a tarefa a ser feita.
-2. O diretório do projeto e aser modificado é diretório corrente.
-3. Existe um workspace para os trabalhos
-    3.1 O diretório do workspace é: ${HOME}/work/spaces
-    3.2 O workspace contem arquivo xml principal TASK-NAME.xml, você deve identificar de qual ferramenta é, ex: Jira
-    3.3 Além do arquivo TASK-NAME.xml todos os arquivos TASK-NAME*.* devem ser considerados anexos, uma resalva apenas para arquivo markdown(*.md) estes podem ter sido gerados por uma A.I.
-    3.4 Arquivos com conteudo JSON são especialmente importantes, pois podem ser logs e documentação openapi
-    3.5 Arquivos de imagens devem ser interpretados logo eles podem ser logs e prints de tela feito pelo usuário.
-4. Crie se necessário o diretório ${HOME}/work/spaces
-5. Solicite permissão para para ações de leitura e gravação nos diretório de arquivo e do projeto
-6. Analise do XML, este xml encontrask em TASK-NAME.xml, esta analise do XML deve compreender a necessidade da modificação
-7. Crie um arquivo TASK-NAME-aprendizado-ai.md onde você deve armazenar o que aprendeu nas analises feitas no diretorio
-8. Crie para a modificação um plano de ação no padrão markdown no arquivo TASK-NAME-plain.md
-9. Solicite permissão para ler e gravar arquivos bem como comandos no diretorio do workspace.
+DEFINICOES INICIAIS
+===================
+ 
+	TASK-NAME
+		Representacao de uma tarefa real
+		Exemplo: TTT-1234
+ 
+	Diretorio do Workspace
+		Local: ${HOME}/work/spaces
+ 
+	Diretorio do Projeto
+		Local: Diretorio corrente (onde comando é executado)
+ 
+ 
+FLUXO DE EXECUCAO
+=================
+ 
+FASE 0: VALIDACAO E AUTORIZACAO (INICIO)
+	0.1
+		Solicite permissao para ler e gravar arquivos
+		Locais: ${HOME}/work/spaces e diretorio atual
+ 
+	0.2
+		Crie se necessario o diretorio ${HOME}/work/spaces
+ 
+	0.3
+		VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
+		Senao interrompa a execucao com erro
+ 
+	0.4
+		Valide se TASK-NAME.xml é formato Jira
+		Deve ser Jira obrigatoriamente
+		Se nao for Jira, interrompa a execucao
+ 
+	0.5
+		Checklist pre-requisitos:
+		- TASK-NAME.xml existe?
+		- Formato Jira valido?
+		- Permissao de leitura em workspace?
+		- Permissao de escrita em workspace?
+		Se qualquer falhar: INTERROMPA
+ 
+ 
+FASE 1: COLETA DE ARTEFATOS
+============================
+ 
+	1.1
+		Localize todos os arquivos TASK-NAME*.* no workspace
+		${HOME}/work/spaces
+ 
+	1.2
+		Classifique os arquivos encontrados:
+ 
+		1.2.1 XML Principal
+			Arquivo: TASK-NAME.xml
+			Status: Obrigatorio, ja validado em 0.4
+			Acao: Extrair dados da task
+ 
+		1.2.2 Arquivos JSON
+			Pattern: TASK-NAME*.json
+			Importancia: Alta
+			Conteudo: Logs, documentacao OpenAPI
+			Acao: Validar sintaxe, extrair estrutura
+ 
+		1.2.3 Arquivos de Imagem
+			Pattern: TASK-NAME*.png, TASK-NAME*.jpg, etc
+			Conteudo: Screenshots, prints de tela
+			Acao: Aplicar OCR, extrair texto visivel
+ 
+		1.2.4 Arquivos Markdown
+			Pattern: TASK-NAME*.md
+			Aviso: Podem ter sido gerados por IA
+			Acao: NÃO considerar como evidencia da task
+ 
+	1.3
+		Para cada anexo (JSON, imagem):
+		Identifique "palavras-chave" mencionadas
+		Valide cruzando com codigo-fonte do repositorio
+		Busque no repositorio por essas palavras-chave
+		Exemplo: grep -r "PalavraDoLog" ./src
+		Marque como "evidencia validada" ou "sem correspondencia"
+ 
+ 
+FASE 2: ANALISE CRITICA
+=======================
+ 
+	2.1
+		Analise o arquivo TASK-NAME.xml para compreender:
+		- Escopo da tarefa
+		- Requisitos de aceitacao
+		- Criterios de sucesso
+		- Dependencias mencionadas
+ 
+	2.2
+		Para cada anexo de log ou print:
+		Extraia informacoes relevantes
+		Identifique classes ou metodos mencionados
+		Identifique arquivos de configuracao mencionados
+		Valide se essas referencias existem no repositorio
+ 
+	2.3
+		Processe arquivos JSON:
+		Valide sintaxe (JSON bem formado?)
+		Se JSON invalido: log do erro, continue analise
+		Se valido: extraia estrutura e significado
+		Busque correspondencia com APIs ou logs do sistema
+ 
+	2.4
+		Processe imagens via OCR:
+		Extraia texto visivel da imagem
+		Se OCR falhar: solicite interpretacao manual
+		Marque manualmente o que nao foi reconhecido
+		Busque palavras-chave no repositorio
+ 
+	2.5
+		Documente todo aprendizado em:
+		Arquivo: TASK-NAME-aprendizado-ai.md
+		Conteudo:
+		- Resumo do que aprendeu
+		- Classes e metodos encontrados
+		- Configuracoes relevantes
+		- Validacoes cruzadas com repositorio
+		- Gaps ou inconsistencias encontradas
+ 
+ 
+FASE 3: CRIACAO DO PLANO DE ACAO
+=================================
+ 
+	3.1
+		Crie plano de acao executavel
+		Arquivo: TASK-NAME-plan.md
+ 
+	3.2
+		Conteudo do plano deve incluir:
+		- Escopo completo da tarefa
+		- Classes que precisam ser modificadas
+		- Metodos que precisam ser criados ou alterados
+		- Arquivos de configuracao afetados
+		- Passos executaveis em sequencia
+		- Validacoes e testes a realizar
+		- Ordem recomendada de implementacao
+ 
+	3.3
+		Estruture o plano em secoes:
+		
+		3.3.1 Resumo Executivo baseado no arquivo TASK-NAME.xml
+			O que vai fazer
+			Por que vai fazer
+			Impacto esperado
+ 
+		3.3.2 Analise de Impacto
+			Deixar claro por a analise levou a sugestão
+            Deixar claro o impacto na aplicação
+ 
+		3.3.3 Passos de Implementacao
+			Extrair objetivo da implementação do arquivo TASK-NAME.xml.
+ 
+		3.3.4 Validacoes
+			Existindo validações então extrai-las do arquivo TASK-NAME.xml 
+ 
+		3.3.5 Rollback (se necessario)
+			Como reverter se der problema
+            Sempre confirmar o rollback
+ 
+ 
+FASE 4: GERACAO DE DOCUMENTACAO
+================================
+ 
+	4.1
+		Crie ou atualize README.md no repositorio
+ 
+	4.2
+		Conteudo do README deve incluir:
+		- Titulo do projeto / modificacao
+		- Overview das mudancas
+		- Classes documentadas com proposito
+		- Metodos principais e assinatura
+		- Arquivos de configuracao relevantes
+		- Como compilar e testar
+		- Exemplos de uso
+		- Notas importantes
+ 
+ 
+FASE 5: TRATAMENTO DE ERROS
+============================
+ 
+	5.1 JSON Invalido
+		Acao: Log do erro, continue analise
+		Flag: Marque como "JSON invalido - verificar manualmente"
+ 
+	5.2 OCR Falhou
+		Acao: Solicite interpretacao manual do print
+		Flag: Marque como "OCR falhou - verificar print"
+ 
+	5.3 Referencia Nao Encontrada
+		Acao: Continuar analise
+		Flag: Documentar que classe/metodo nao foi localizado
+ 
+	5.4 TASK-NAME.xml Estrutura Inesperada
+		Acao: PARAR execucao
+		Erro: Reportar qual campo nao foi encontrado
+		Requer: Investigacao manual
+
+	5.5 TASK-NAME.xml Sem objetivo claro ou evidencias
+		Acao: PARAR execucao
+		Erro: Reportar qual campo nao foi encontrado
+		Requer: Investigacao manual
+ 
+	5.6 Arquivo Corrompido
+		Acao: PARAR execucao
+		Erro: Informar qual arquivo esta corrompido
+		Recomendacao: Recuperar versao valida
+ 
+ 
+FASE 6: CONFIRMACAO FINAL
+==========================
+ 
+	6.1
+		Resuma arquivos criados:
+		- TASK-NAME-aprendizado-ai.md (gerado?)
+		- TASK-NAME-plan.md (gerado?)
+		- README.md (criado ou atualizado?)
+ 
+	6.2
+		Liste proximos passos para implementacao
+ 
+	6.3
+		Indique se houve alguma interrupcao ou erro
+ 
+ 
+RESUMO DO FLUXO
+===============
+ 
+	Fase 0: Validacoes e Permissoes
+	Fase 1: Coleta de Artefatos
+	Fase 2: Analise Critica
+	Fase 3: Criacao do Plano
+	Fase 4: Geracao de Documentacao
+	Fase 5: Tratamento de Erros (durante todo processo)
+	Fase 6: Confirmacao e Proximos Passos
 ```
