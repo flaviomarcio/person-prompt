@@ -10,7 +10,7 @@ DEFINICOES INICIAIS
  
 	TASK-NAME
 		Representacao de uma tarefa real
-		Exemplo: TTT-1234
+		Identificador: TTT-1234
  
 	Diretorio do Workspace
 		Local: ${HOME}/work/spaces
