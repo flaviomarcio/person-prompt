@@ -15,9 +15,7 @@ Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos
     3.5 Arquivos de imagens devem ser interpretados logo eles podem ser logs e prints de tela feito pelo usuário.
 4. Crie se necessário o diretório ${HOME}/work/spaces
 5. Solicite permissão para para ações de leitura e gravação nos diretório de arquivo e do projeto
-6. Analise do XML, este xml encontrask em TASK-NAME.xml
-    6.1 Analise o XML da task para compreender a necessidade da modificação
-    6.2 Considere que o XML tem anexos inclusos onde se faz necessário download e analise dos mesmos, especialmente falando de json que podem ser um openapi
+6. Analise do XML, este xml encontrask em TASK-NAME.xml, esta analise do XML deve compreender a necessidade da modificação
 7. Crie um arquivo TASK-NAME-aprendizado-ai.md onde você deve armazenar o que aprendeu nas analises feitas no diretorio
 8. Crie para a modificação um plano de ação no padrão markdown no arquivo TASK-NAME-plain.md
 9. Solicite permissão para ler e gravar arquivos bem como comandos no diretorio do workspace.
